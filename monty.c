@@ -17,11 +17,8 @@ int main(int argc, char const *argv[])
 	unsigned int compt = 0;
 	int idx;
 	instruction_t opcode[] = {{"push", push}, {"pall", pall}, {"pint", pint},
-	{"pop", pop}, {"swap", swap}, {"add", add}, {"pchar", pchar}, {"nop", nop},
-	{"sub", sub}, {"div", div1}, {"mul", mul}, {"mod", mod}, {"pstr", pstr},
-	{"rotl", rotl}, {"rotr", rotr}};
+	{"pop", pop}, {"swap", swap}, {"add", add}};
 	stack_t *stack = NULL;
-
 	if (argc != 2)
 		argc_error();
 	file = fopen(argv[1], "r");
