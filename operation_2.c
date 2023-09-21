@@ -51,7 +51,7 @@ void add(stack_t **stack, unsigned int line_number)
 */
 void sub(stack_t **stack, unsigned int line_number)
 {
-	int number;
+	int num;
 	stack_t *tmp;
 
 	if (!(*stack) || !((*stack)->next))
@@ -61,8 +61,8 @@ void sub(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	tmp = *stack;
-	number = (*stack)->n;
-	(*stack)->next->n -= number;
+	num = (*stack)->n;
+	(*stack)->next->n -= num;
 	(*stack)->next->prev = NULL;
 	free(tmp);
 	*stack = (*stack)->next;
