@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * push - function push.
- * @stack: pointer to the Linked list.
+ * push -. 
+ * @stack:.
  * @line_number: .
  * Return: .
 */
