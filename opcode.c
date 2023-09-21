@@ -7,7 +7,7 @@
 */
 int opcode_(char *line, instruction_t opcode[])
 {
-	int i;
+	int i = 0;
 
 	for (i = 0; i < 16; i++)
 	{

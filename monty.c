@@ -19,6 +19,7 @@ int main(int argc, char const *argv[])
 	instruction_t opcode[] = {{"push", push}, {"pall", pall}, {"pint", pint},
 	{"pop", pop}, {"swap", swap}, {"add", add}};
 	stack_t *stack = NULL;
+
 	if (argc != 2)
 		argc_error();
 	file = fopen(argv[1], "r");
@@ -43,7 +44,8 @@ int main(int argc, char const *argv[])
 			free_list(&stack);
 			instr_error(compt, line_te, line);
 		}
-	} free(line);
+	}
+	free(line);
 	free_list(&stack);
 	fclose(file);
 	return (0);
