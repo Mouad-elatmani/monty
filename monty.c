@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 	unsigned int compt = 0;
 	int idx;
 	instruction_t opcode[] = {{"push", push}, {"pall", pall}, {"pint", pint},
-	{"pop", pop}, {"swap", swap}, {"add", add},{"nop", nop}};
+	{"pop", pop}, {"swap", swap}, {"add", add},{"nop", nop},{"sub", sub}};
 	stack_t *stack = NULL;
 
 	if (argc != 2)

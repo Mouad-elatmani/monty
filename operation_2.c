@@ -79,3 +79,32 @@ void nop(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	(void)line_number;
 }
+/**
+ * div1 - .
+ * @stack: .
+ * @line_number: .
+ * Return: .
+*/
+void div1(stack_t **stack, unsigned int line_number)
+{
+	int number;
+	stack_t *tmp;
+
+	if (!(*stack) || !((*stack)->next))
+	{
+		free_list(stack);
+		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	if (((*stack)->n) == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	tmp = *stack;
+	number = (*stack)->n;
+	(*stack)->next->n /= number;
+	(*stack)->next->prev = NULL;
+	free(tmp);
+	*stack = (*stack)->next;
+}
