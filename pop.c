@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * pop - remove the top element from the stack..
  * @stack: A pointer to a pointer of the stack_t structure. .
